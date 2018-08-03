@@ -1,4 +1,4 @@
-const getMinOrderValue = require('./');
+const getMinOrderValue = require('./index');
 
 test("should format the value 0.00100000 in unit BTC to 0.001", () => {
     expect(getMinOrderValue(0.00100000, "BTC")).toBe(0.001);
