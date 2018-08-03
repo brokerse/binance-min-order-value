@@ -25,7 +25,7 @@ function getMinOrderValue(value, unit, baseAsset) {
 
     const unitUpperCase = unit.toUpperCase().trim();
     const baseAssetUpperCase = baseAsset 
-        ? baseAsset.toUpperCase.trim() 
+        ? baseAsset.toUpperCase().trim()
         : null;
     const [x, y] = value.toString().split(".");
 

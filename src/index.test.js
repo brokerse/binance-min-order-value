@@ -56,15 +56,14 @@ test("should format the value 0.10000000 in unit BNB to 0.1", () => {
     expect(getMinOrderValue(0.10000000, "USDT", "BTC")).toBe(0.1);
 });
 
-test("should format the value 0.00150000 in unit BNB to 0.1", () => {
-    expect(getMinOrderValue(0.11500000, "USDT", "ETH")).toBe(0.1);
+test("should format the value 0.11500000 in unit BNB to 0.11", () => {
+    expect(getMinOrderValue(0.11500000, "USDT", "ETH")).toBe(0.11);
 });
 
 test("should format the value 0.10100000 in unit BNB to 0.1", () => {
     expect(getMinOrderValue(0.10100000, "USDT", "BNB")).toBe(0.1);
 }); 
 
-test("should format the value 0.11100000 in unit BNB to 0.1", () => {
-    expect(getMinOrderValue(0.11100000, "USDT", "BCC")).toBe(0.1);
+test("should format the value 0.11100000 in unit BNB to 0.11", () => {
+    expect(getMinOrderValue(0.11100000, "USDT", "BCC")).toBe(0.11);
 });
-
