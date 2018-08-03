@@ -7,7 +7,7 @@
         "url": "https://github.com/clubinvest/binance-min-order-value/issues"
     },
     "devDependencies": {
-        "jest": "23.4.1"
+        "jest": "23.4.2"
     },
     "homepage": "https://github.com/clubinvest/binance-min-order-value#readme",
     "keywords": [
@@ -28,6 +28,6 @@
     },
     "scripts": {
         "coverage": "jest --coverage",
-        "test": "jest"
+        "test": "./node_modules/.bin/jest"
     }
 }
