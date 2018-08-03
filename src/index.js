@@ -14,15 +14,19 @@ const EXCEPTION_USDT = [
 ];
 
 /**
- * @param {string} value 
+ * @param {number} value 
  * @param {string} unit 
+ * @param {string} baseAsset
  */
-function getMinOrderValue(value, unit) {
+function getMinOrderValue(value, unit, baseAsset) {
     if(!value || !unit) {
         throw new Error("Incorrect value or unit");
     }
 
     const unitUpperCase = unit.toUpperCase().trim();
+    const baseAssetUpperCase = baseAsset 
+        ? baseAsset.toUpperCase.trim() 
+        : null;
     const [x, y] = value.toString().split(".");
 
     if(unitUpperCase === UNIT.BTC) {
@@ -38,7 +42,7 @@ function getMinOrderValue(value, unit) {
     }
 
     if(unitUpperCase === UNIT.USDT) {
-        if(EXCEPTION_USDT.includes(unitUpperCase)) {
+        if(EXCEPTION_USDT.includes(baseAssetUpperCase)) {
             return Number(`${x}.${y.substring(0, 1)}`);
         }
 
