@@ -26,25 +26,24 @@ function getMinOrderValue(value, unit) {
     const [x, y] = value.toString().split(".");
 
     if(unitUpperCase === UNIT.BTC) {
-        return parseFloat(`${x}.${y.substring(0, 3)}`).toFixed(3);
+        return Number(`${x}.${y.substring(0, 3)}`);
     }
 
     if(unitUpperCase === UNIT.ETH) {
-        return parseFloat(`${x}.${y.substring(0, 2)}`).toFixed(2);
+        return Number(`${x}.${y.substring(0, 2)}`);
     }
 
-
     if(unitUpperCase === UNIT.BNB) {
-        return parseFloat(`${x}.${y.substring(0, 1)}`).toFixed(1);
+        return Number(`${x}.${y.substring(0, 1)}`)
     }
 
     if(unitUpperCase === UNIT.USDT) {
         if(EXCEPTION_USDT.includes(unitUpperCase)) {
-            return parseFloat(`${x}.${y.substring(0, 1)}`).toFixed(1);
+            return Number(`${x}.${y.substring(0, 1)}`);
         }
 
-        return parseFloat(`${x}.${y.substring(0, 2)}`).toFixed(2);
+        return Number(`${x}.${y.substring(0, 2)}`);
     }
 }
 
-module.export = getMinOrderValue;
+module.exports = getMinOrderValue;
