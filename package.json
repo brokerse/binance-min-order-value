@@ -1,0 +1,33 @@
+{
+    "name": "@clubinvestbr/binance-min-order-value",
+    "description": "Library created to solve order creation problems that returns the LOT_SIZE error, because unfortunately the current Binance API can not solve a simple problem.",
+    "version": "0.0.1",
+    "author": "Rodrigo Oler <https://github.com/rodrigooler>",
+    "bugs": {
+        "url": "https://github.com/clubinvest/binance-min-order-value/issues"
+    },
+    "devDependencies": {
+        "jest": "23.4.1"
+    },
+    "homepage": "https://github.com/clubinvest/binance-min-order-value#readme",
+    "keywords": [
+        "binance",
+        "cryptocurrency",
+        "exchange",
+        "min",
+        "min ordervalue",
+        "open-source",
+        "order",
+        "value"
+    ],
+    "license": "MIT",
+    "main": "src/index.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/clubinvest/binance-min-order-value.git"
+    },
+    "scripts": {
+        "coverage": "jest --coverage",
+        "test": "jest"
+    }
+}
