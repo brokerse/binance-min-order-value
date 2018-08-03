@@ -13,6 +13,10 @@ const EXCEPTION_USDT = [
     "VET",
 ];
 
+/**
+ * @param {string} value 
+ * @param {string} unit 
+ */
 function getMinOrderValue(value, unit) {
     if(!value || !unit) {
         throw new Error("Incorrect value or unit");
@@ -42,3 +46,5 @@ function getMinOrderValue(value, unit) {
         return parseFloat(`${x}.${y.substring(0, 2)}`).toFixed(2);
     }
 }
+
+module.export = getMinOrderValue;
